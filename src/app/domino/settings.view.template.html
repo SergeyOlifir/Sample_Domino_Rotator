@@ -1,0 +1,8 @@
+<h4>Settings</h4>
+
+<form>
+    <label>Scale: {{settings.scaleFactor / 10}}</label>
+    <input ng-model="settings.scaleFactor" ng-change="settings.UpdateScaleFactor()" type="range" min="1" max="10" step="1" />
+    <label>Speed: (Fast - Slow)</label>
+    <input ng-model="settings.animationSpeed" ng-change="settings.UpdateAnimationSpeed()" type="range" min="10" max="20" step="1" />
+</form>

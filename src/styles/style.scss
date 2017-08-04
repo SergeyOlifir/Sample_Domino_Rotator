@@ -1,0 +1,77 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+$domino-face-color: #f6f6f6;
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+.domino-face {
+    width: 30%;
+    padding: 30%;
+    margin: 0 auto; 
+    background: $domino-face-color;
+    position: relative;
+    border: 1px solid #000;
+    &:hover {cursor: pointer}
+}
+
+.dot {
+    width: 10%;
+    position: absolute;
+    background: #000;
+    height: 10%;
+    display: block;
+    content: '';
+    @include border-radius(100%);
+}
+
+.dot.first-dot {
+    top: 10%;
+    left: 10%;
+}
+
+.dot.second-dot {
+    top: 10%;
+    right: 10%;
+}
+
+.dot.third-dot {
+    bottom: 10%;
+    left: 10%;
+}
+
+.dot.forth-dot {
+    bottom: 10%;
+    right: 10%;
+}
+
+.dot.fifth-dot {
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
+}
+
+.dot.sixth-dot {
+    bottom: 50%;
+    left: 10%;
+    transform: translate(0%, 50%);
+}
+
+.dot.seventh-dot {
+    bottom: 50%;
+    right: 10%;
+    transform: translate(0%, 50%);
+}
+
+.domino {
+    transition: all 1s;
+}

@@ -1,0 +1,12 @@
+<h3 class="text-center">Configure Domino</h3>
+<div class="domino-wrp">
+    <div class="domino" style="transform: scale({{dominoView.dominoStateService.scaleFactor}}) rotate({{dominoView.dominoStateService.rotAngle}}deg); transition-duration:{{dominoView.dominoStateService.animationSpeed}}s">
+        <div class="domino-face">
+            <i class="{{dot}}" ng-repeat="dot in dominoView.dominoStateService.topFace" ></i>
+        </div>
+        <div class="domino-face">
+            <i class="{{dot}}" ng-repeat="dot in dominoView.dominoStateService.bottomFace" ></i>
+        </div>
+    </div>
+    
+</div>

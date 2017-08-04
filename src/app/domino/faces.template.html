@@ -1,0 +1,5 @@
+<h3 class="text-center">Select Face</h3>
+<div class="domino-face" ng-repeat="face in dominoFaces.allAvaliableFaces"
+     ng-click="dominoFaces.SelectFace(face)">
+    <i class="{{dot}}" ng-repeat="dot in face" ></i>
+</div>
